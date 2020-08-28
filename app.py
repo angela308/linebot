@@ -39,10 +39,6 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     w = '我無法解讀...'
-    sticker_message = StickerSendMessage(
-        package_id='2',
-        sticker_id='164'
-    )
 
     if msg in ['hi','你好','Hi']:
         w = '你好鴨!'
