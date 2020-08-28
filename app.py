@@ -38,12 +38,18 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    w = 'ERROR'
+    w = '[ERROR]無法解讀'
 
     if msg in ['hi','你好','Hi']:
         w = '你好鴨!'
     elif msg == '你是誰':
         w = '我是機器人呦!'
+    elif msg == '去死':
+        w = '好҉̗̥͉̝͖͎̝̯̘͈̯̘̟̱̞͒́̈̏̿̓̒̄̚̚的҉̯̫̭̖͙̜̯̮̇́̈͑̉̇̊͑̆̿̓͆̅͊ͅ'
+    elif msg == '你喜歡什麼' or '你喜歡誰':
+        w = '我最喜歡ChroNoiR啦!他們真的很好!'
+    elif msg == '你喜歡吃什麼':
+        w = '布丁!'
 
 
     line_bot_api.reply_message(
